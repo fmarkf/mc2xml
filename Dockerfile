@@ -12,7 +12,8 @@ RUN apt-get update
 RUN apt-get install -qy \
 software-properties-common \
 build-essential \
-pkg-config
+pkg-config \
+wget
 
 RUN apt-get autoclean -y
 
