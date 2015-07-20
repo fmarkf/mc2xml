@@ -1,6 +1,6 @@
 # mc2xml
 
-FROM phusion:baseimage-docker:latest
+FROM phusion:baseimage-docker
 
 # User/Group Id gui app will be executed as default are 99 and 100
 ENV USER_ID=99
