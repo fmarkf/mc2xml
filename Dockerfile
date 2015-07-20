@@ -1,6 +1,16 @@
 # mc2xml
 
-FROM ubuntu
+FROM phusion:baseimage-docker:latest
+
+# User/Group Id gui app will be executed as default are 99 and 100
+ENV USER_ID=99
+ENV GROUP_ID=100
+
+# Gui App Name default is "GUI_APPLICATION"
+ENV APP_NAME="mc2xml"
+
+# Use baseimage-docker's init system
+CMD ["/sbin/my_init"]
 
 RUN echo 'deb http://archive.ubuntu.com/ubuntu trusty main universe restricted' > /etc/apt/sources.list
 RUN echo 'deb http://archive.ubuntu.com/ubuntu trusty-updates main universe restricted' >> /etc/apt/sources.list
